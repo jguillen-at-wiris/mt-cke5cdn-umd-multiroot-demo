@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CKEditor 5 CDN Multi-root + MathType Demo</title>
+    <!-- Load CKEditor 5 UMD -->
+    <script src="src/ckeditor/ckeditor5.umd.js"></script>
+    <!-- Load MathType UMD -->
+    <script src="src/mathtype/index.umd.js"></script>
+    <!-- CKEditor 5 & MathType CSS files for proper styling -->
+    <link rel="stylesheet" href="src/ckeditor/ckeditor5.css">
+    <link rel="stylesheet" href="src/mathtype/index.css">
+  </head>
+  <body>
+    <h1>CKEditor 5 CDN Multi-root + MathType Demo</h1>
+    <p>This demo shows CKEditor 5 with 4 separate editable areas sharing a common toolbar.</p>
+    
+    <!-- Toolbar container -->
+    <div id="toolbar"></div>
+    
+    <!-- Container for all editable areas -->
+    <div id="editor-container">
+      <div class="editor-section">
+        <h3>Header Section</h3>
+        <div id="header" class="editable-area">
+          <h2>Welcome to our Website</h2>
+          <p>This is the header section where you can edit the main title and introduction.</p>
+        </div>
+      </div>
+
+      <div class="editor-section">
+        <h3>Content Section</h3>
+        <div id="content" class="editable-area">
+          <p>This is the main content area. You can add <strong>rich text</strong>, create lists, and format your content.</p>
+          <ul>
+            <li>Feature 1: Rich text editing</li>
+            <li>Feature 2: Multiple editor instances</li>
+            <li>Feature 3: Shared toolbar</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="editor-section">
+        <h3>Sidebar Section</h3>
+        <div id="sidebar" class="editable-area">
+          <h4>Quick Links</h4>
+          <p>This sidebar can contain additional information, links, or promotional content.</p>
+          <p><em>Edit this area independently from the others!</em></p>
+        </div>
+      </div>
+
+      <div class="editor-section">
+        <h3>Footer Section</h3>
+        <div id="footer" class="editable-area">
+          <p>© 2025 Your Company. This footer section can contain contact information, copyright notices, and other important details.</p>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

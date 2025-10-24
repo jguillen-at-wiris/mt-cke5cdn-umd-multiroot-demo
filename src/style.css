@@ -1,0 +1,169 @@
+/* CKEditor 5 Multiroot Demo Styles */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #213547;
+  background-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Toolbar Styling */
+#toolbar {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px 8px 0 0;
+  padding: 10px;
+  margin-bottom: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 20px;
+  z-index: 100;
+}
+
+/* Editor Container */
+#editor-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0 0 8px 8px;
+  border-top: none;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Section Layout */
+.editor-section {
+  background-color: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.editor-section:hover {
+  border-color: #c0c0c0;
+  background-color: #f7f7f7;
+}
+
+.editor-section h3 {
+  margin: 0 0 10px 0;
+  color: #555;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Editable Areas */
+.editable-area {
+  background-color: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 15px;
+  min-height: 100px;
+  transition: all 0.3s ease;
+  cursor: text;
+}
+
+.editable-area:hover {
+  border-color: #007cba;
+  box-shadow: 0 0 0 1px rgba(0, 124, 186, 0.2);
+}
+
+.editable-area.focused {
+  border-color: #007cba;
+  box-shadow: 0 0 0 3px rgba(0, 124, 186, 0.1);
+  background-color: #fefffe;
+}
+
+/* Specific Grid Layout */
+.editor-section:nth-child(1) { /* Header */
+  grid-column: 1 / -1;
+}
+
+.editor-section:nth-child(2) { /* Content */
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.editor-section:nth-child(3) { /* Sidebar */
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.editor-section:nth-child(4) { /* Footer */
+  grid-column: 1 / -1;
+  grid-row: 3;
+}
+
+/* CKEditor specific styling */
+.ck-editor__editable {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.ck-editor__editable:focus {
+  box-shadow: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #editor-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+  
+  .editor-section:nth-child(1) { /* Header */
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .editor-section:nth-child(2) { /* Content */
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  .editor-section:nth-child(3) { /* Sidebar */
+    grid-column: 1;
+    grid-row: 3;
+  }
+  
+  .editor-section:nth-child(4) { /* Footer */
+    grid-column: 1;
+    grid-row: 4;
+  }
+  
+  body {
+    padding: 10px;
+  }
+  
+  #toolbar {
+    position: relative;
+    top: auto;
+  }
+}
